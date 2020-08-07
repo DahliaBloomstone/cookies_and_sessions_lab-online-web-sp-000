@@ -11,5 +11,6 @@ def add
 @product = Product.find(params[:id])
 end
 
+cart = session[:cart] || []
 cart << @product.id
-end 
+end
