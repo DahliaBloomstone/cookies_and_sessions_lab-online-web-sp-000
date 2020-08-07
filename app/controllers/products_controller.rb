@@ -7,15 +7,6 @@ def index
 end
 
 def add
-cart << product_params
-redirect_to :products
-end
-
-
-private
-
-def product_params
-  params.requrie(:product)
-
-  end
+cart << params[:product]
+redirect_to '/'
 end
