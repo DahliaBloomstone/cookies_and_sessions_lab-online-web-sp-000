@@ -8,7 +8,5 @@ def index
 end
 
 def add
-cart << params[:product]
-redirect_to '/'
-end
+@product = Product.find(params[:id])
 end
