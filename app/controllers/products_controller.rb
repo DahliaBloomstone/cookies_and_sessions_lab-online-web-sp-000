@@ -4,8 +4,5 @@
 def add_to_cart
   @product = Product.find(params[:id])
 
-  cart = session[:cart] || []
-  cart << @product.id
-
-  session[:cart] = cart
-end 
+current_cart << @product.id 
+end
