@@ -4,7 +4,8 @@
 class ProductsController < ApplicationController
 
 def index
-end 
+  @cart = cart 
+end
 
 def add_to_cart
   @product = Product.find(params[:id])
