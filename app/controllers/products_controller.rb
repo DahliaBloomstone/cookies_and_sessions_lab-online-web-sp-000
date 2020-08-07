@@ -13,4 +13,5 @@ end
 
 cart = session[:cart] || []
 cart << @product.id
+session[:cart] = cart 
 end
