@@ -4,10 +4,10 @@
 class ProductsController < ApplicationController
 
 def index
-  @cart = cart 
+  @cart = cart
 end
 
-def add_to_cart
+def add
   @product = Product.find(params[:id])
 
 current_cart << @product.id
