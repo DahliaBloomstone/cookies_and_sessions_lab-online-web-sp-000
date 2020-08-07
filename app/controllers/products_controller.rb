@@ -18,5 +18,5 @@ private
 def product_params
   params.requrie(:product)
 
-end 
+  end 
 end
