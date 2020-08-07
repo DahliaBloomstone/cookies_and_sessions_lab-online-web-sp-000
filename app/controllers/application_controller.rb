@@ -5,7 +5,11 @@ class ApplicationController < ActionController::Base
 
 
 #Create the cart method in ApplicationController#cart, this method should return an array of the items stored in the cart (utilizing the Rails session method).
+helper_method :current_cart
 
+def current_cart
+  session[:cart] ||= []
+end 
 
 
 
