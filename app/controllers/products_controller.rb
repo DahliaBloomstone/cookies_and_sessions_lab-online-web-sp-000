@@ -8,10 +8,14 @@ def index
 end
 
 def add
-  @product = Product.find(params[:id])
-
-current_cart << @product.id
+cart << product_params
+redirect_to :products
 end
 
 
+private
+
+def product_params
+  params.requrie(:product)
+end 
 end
