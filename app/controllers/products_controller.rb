@@ -10,3 +10,6 @@ end
 def add
 @product = Product.find(params[:id])
 end
+
+cart << @product.id
+end 
