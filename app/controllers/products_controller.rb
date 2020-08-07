@@ -2,16 +2,11 @@
 #Create the routes for the application, we only need two routes, one to display the Products#index (the root route) and one to post the products to add them to the cart.
 
 class ProductsController < ApplicationController
+  def index
+  end
 
-def index
-  @cart = cart
-end
-
-def add
-@product = Product.find(params[:id])
-end
-
-cart = session[:cart] || []
-cart << @product.id
-session[:cart] = cart 
+  def add
+    cart << params[:product]
+    redirect_to '/'
+  end
 end
